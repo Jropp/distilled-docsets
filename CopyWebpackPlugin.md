@@ -1,14 +1,14 @@
 # Copy Webpack Plugin
 
+Full documentation available [here](https://github.com/webpack-contrib/copy-webpack-plugin)
+
 ## Opening Remarks
 
-#### Notice that all of this is happening as a plugin in your webconfig file.
+ Notice that all of this is happening as a plugin in your webconfig file.
 
 ## Open Questions
 
 What is an output directory?
-
-
 
 
 ## Simple Pattern
