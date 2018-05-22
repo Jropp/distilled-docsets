@@ -9,11 +9,12 @@ Full documentation available [here](https://github.com/webpack-contrib/copy-webp
 ## Open Questions
 
 What is an output directory?
+What is the default output path?
 
 
 ## Simple Pattern
 
-Everything else below is an expansion of this
+Everything else below is an expansion of these objects
 ```
 [
 { from: 'source', to: 'dest' }
@@ -80,17 +81,20 @@ Setup in `webpack.config.js`
 #### test
 
 Defines a regexp to match parts of the file path
+
 #### force
 I don't know what this does and documentation doesn't state explicitly.
+
 #### ignore
 Array of globs to ignore
+
 #### flatten
-Same
+I don't know
+
 #### transform
 Takes in the content and the path either as a function or a promise and I'm guessing transforms it.
 
 ### Context
-
 A path that determines how to interpret the from path, shared for all patterns
 
 ```
@@ -100,7 +104,3 @@ A path that determines how to interpret the from path, shared for all patterns
   ], options)
 ]
 ```
-
-
-
-toType 
