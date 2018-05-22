@@ -6,7 +6,9 @@ Everything fits into one of these four areas
 
 ## Questions
 
-When using html-loader, how are the bundled files extracted from main.js? Particularly the html files. 
+- When using html-loader, how are the bundled files extracted from main.js? Particularly the html files. 
+
+- What is the difference between synchronous and asynchronous loaders?
 
 ## 1 Entry
 
@@ -30,13 +32,17 @@ The default of WP is to create and bundle the files into a dist/ folder in the r
 
 ## 3 Loaders
 
+Definition: A loader is a [node module](https://www.w3schools.com/nodejs/nodejs_modules.asp) that exports a function.
+
+That function is called when a resource (lets say an html file) needs to be transformed by the particular loader.
+
 The default for WP is bundling js files. But there are loaders to bundle other types of files.
 
 Loaders transform source code into javascript, or inline images into data URLs.
 
 They are like 'tasks' if you have used other build tools.
 
-### Setup/Configuration
+#### Setup/Configuration Basics
 
 You can use loaders one of three ways:
 
@@ -47,7 +53,7 @@ You can use loaders one of three ways:
 I have stuck to using them in webpack.config.js (see example in html-loader)
 
 
-### html-loader
+#### html-loader
 
 The following bundled the html properly into nodes in the bundle.js (I think it did anyway). To date I haven't figured out how to get the page to display properly though.
 
@@ -81,6 +87,13 @@ module: {
 			},
 		]
 ```
+
+#### [Resolving Loaders](./webpack-in-depth/resolve-loaders.md)
+
+A loader module is expected to export a function written in Node.js compatible js. 
+
+#### [Writing A Loader](https://webpack.js.org/contribute/writing-a-loader/)
+
 ## 4 Plugins
 
 Other open source npm tools to help you do what you need. 
