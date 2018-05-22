@@ -8,7 +8,7 @@ Everything fits into one of these four areas
 
 When using html-loader, how are the bundled files extracted from main.js? Particularly the html files. 
 
-## Entry
+## 1 Entry
 
 You can have one or multiple entry points for your project. Think of an entry point as a single file that is the trunk of a tree. You set this entry point as your trunk and then connect all the branches that you need from there. 
 
@@ -24,11 +24,11 @@ I don't entirely understand import or require syntax so make sure to double chec
 
 But WP will detect those branches automatically and bundle them all into one file for you.
 
-## Output
+## 2 Output
 
 The default of WP is to create and bundle the files into a dist/ folder in the root of your project
 
-## Loaders
+## 3 Loaders
 
 The default for WP is bundling js files. But there are loaders to bundle other types of files.
 
@@ -81,7 +81,7 @@ module: {
 			},
 		]
 ```
-## Plugins
+## 4 Plugins
 
 Other open source npm tools to help you do what you need. 
 
