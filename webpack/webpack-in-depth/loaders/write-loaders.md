@@ -23,11 +23,11 @@ In webpack.config.js:
 
 ### 2 Test multiple loaders
 
-### 3 Create separeate repo and package
+### 3 Create separate repo and package
 
 `npm link` it to the project in which you want to test it
 
-## Basics
+## [Basics](https://webpack.js.org/contribute/writing-a-loader/#simple-usage)
 
 When a single loader is applied to myFile.html, the loader (remember its a function) has one parameter: a string containing the content of myFile.html.
 
@@ -47,3 +47,11 @@ eval("module.exports = \"<!DOCTYPE html> <html lang=en> <head> <meta charset=utf
 
 /***/ }),
 ```
+
+**Synchronous loaders** can simply return a single value: the transformed module. 
+
+Q: Does 'transformed module' mean the module transformed into a string, or the string transformed back into code when you serve the project. 
+
+## Complex Loaders
+
+- Multiple loaders are chained and they execute in reverse order

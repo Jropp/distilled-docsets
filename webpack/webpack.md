@@ -1,5 +1,7 @@
 # Webpack
 
+[Webpack Master Configuration](https://webpack.js.org/configuration/)
+
 ## Core Concepts
 
 Everything fits into one of these four areas
@@ -96,9 +98,36 @@ A loader module is expected to export a function written in Node.js compatible j
 
 ## 4 Plugins
 
+Plugins are the backbone of webpack. 
+
 Other open source npm tools to help you do what you need. 
 
-### HTMLWebpackplugin
+They do anything else that a loader cannot do.
+
+### Basics
+
+- A plugin is a javascript object that has an apply property. 
+
+- (Note: the apply property is in the plugin file.js not the webpack-config file where you create a `new SomePlugin()` in the plugins array)
+
+- plugins can take arguments/options
+
+example:
+
+```
+new HtmlWebPackPlugin({
+			hash: true,
+			template: "src/index.html",
+			filename: "index.html"
+		})
+```
+
+
+### [HTMLWebpackplugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+
+**What it does:** simplifies creation of HTML files.
+
+- especially useful for bundles that include a hash
 
 I used this on my [onboarding project](https://github.com/Jropp/jason-ropp-js-iobp/pull/35) at one point. It creates a new entry point for an html file. At first I used a new plugin for each html file and things worked properly. But this got clunky. 
 
